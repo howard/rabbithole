@@ -64,18 +64,10 @@ nav > a {
 
 #chatForm {
     width: 100%;
+    padding: 0;
+    text-align: center;
 }
 #chatForm input {
-    margin: 5px;
-}
-#chatForm .nickname {
-    width: 90px;
-}
-#chatForm .data {
-    width: 100%;
-    margin-right: 60px;
-}
-#chatForm .submit {
-    width: 50px;
-    float: right;
+    margin-top: 5px;
+    width: 98%;
 }
