@@ -11,6 +11,10 @@ function init() {
     var chatForm = document.getElementById('chatForm');
     chatForm.onsubmit = submitChat;
     startChatRefresh();
+
+    if (window.matchMedia('(max-width: 600px)').matches) {
+        setMobileChatHeight();
+    }
 }
 
 function headerAside() {
@@ -38,7 +42,6 @@ function hideRest(exception) {
 
 function showElement(elem) {
     elem.style.display = "block";
-    console.log(elem);
     setTimeout(function () {
         elem.classList.remove('hidden');
     }, 100);
@@ -91,4 +94,12 @@ function getFormData() {
            '&color=def';
     dataElem.value = '';
     return formData;
+}
+
+function setMobileChatHeight() {
+    var headerElem = document.getElementsByTagName('header')[0];
+    var chatContentElem = document.getElementById('chatContent');
+    var freeHeight = window.innerHeight - headerElem.clientHeight - 160;
+    console.log(freeHeight);
+    chatContentElem.style.height = '' + freeHeight + 'px';
 }
