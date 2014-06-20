@@ -1,13 +1,13 @@
 <head>
     <meta charset="utf-8">
 	<title>The Rabbit Hole</title>
-    <link rel="stylesheet" type="text/css" href="../common.css">
-    <link rel="stylesheet" type="text/css" href="../common.mobile.css" media="screen and (max-width: 600px)">
-    <link rel="stylesheet" type="text/css" href="files.css">
+    <link rel="stylesheet" type="text/css" href="/common.css">
+    <link rel="stylesheet" type="text/css" href="/common.mobile.css" media="screen and (max-width: 600px)">
+    <link rel="stylesheet" type="text/css" href="/files.css">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
 </head>
 <header class="aside">
-    <img class="logo" src="../images/logo-large.png">
+    <img class="logo" src="/images/logo-large.png">
     <nav>
         <a id="uploadLink" href="/#upload">Upload</a>
         <a href="/Shared/">Files</a>
