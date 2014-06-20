@@ -1,6 +1,20 @@
-body {
-    background: url('../www/images/background.png');
-    color: #E3E3E3;
-    font-family: sans-serif;
+.content {
+    display: block;
 }
 
+.content table {
+    width: 100%;
+}
+
+header, .list table tbody tr:hover {
+    background: none;
+}
+
+@media(max-width: 600px) {
+    .content table th, .content table td {
+        display: none;
+    }
+    .content table th:first-child, .content table td:first-child {
+        display: table-cell;
+    }
+}
