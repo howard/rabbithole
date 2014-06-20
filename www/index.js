@@ -1,11 +1,9 @@
+var contentNames = ['upload', 'chat', 'about'];
+
 function init() {
-    var contentNames = ['upload', 'chat', 'about'];
     for (var i = 0; i < contentNames.length; i++) {
         var elem = document.getElementById(contentNames[i] + 'Link');
-        elem.href = '#';
-        elem.onclick = (function (contentName) {
-            return function () { showContent(contentName); };
-        })(contentNames[i]);
+        elem.href = '#' + contentNames[i];
     }
 
     var chatForm = document.getElementById('chatForm');
@@ -15,6 +13,9 @@ function init() {
     if (window.matchMedia('(max-width: 600px)').matches) {
         setMobileChatHeight();
     }
+
+    routeAnchor();
+    window.onhashchange = routeAnchor;
 }
 
 function headerAside() {
@@ -102,4 +103,11 @@ function setMobileChatHeight() {
     var freeHeight = window.innerHeight - headerElem.clientHeight - 160;
     console.log(freeHeight);
     chatContentElem.style.height = '' + freeHeight + 'px';
+}
+
+function routeAnchor() {
+    var anchor = window.location.hash.substring(1);
+    if (contentNames.indexOf(anchor) > -1) {
+        showContent(anchor);
+    }
 }
