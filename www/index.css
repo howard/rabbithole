@@ -1,5 +1,6 @@
 header {
-    margin-top: 30%;
+    margin-top: 200px;
+    text-align: center;
     -webit-transition: margin-top 0.2s;
     transition: margin-top 0.2s;
 }
@@ -8,7 +9,6 @@ header.aside {
 }
 
 .logo {
-    background: url('images/logo-large.png');
     margin-left: auto;
     margin-right: auto;
     width: 600px;
@@ -20,7 +20,6 @@ nav {
     margin-right: auto;
     margin-top: 10px;
     font-size: 24px;
-    text-align: center;
 }
 
 nav > a {
